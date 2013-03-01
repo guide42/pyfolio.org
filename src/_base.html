@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN"
+    "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>{% block title %}Folio{% endblock %}</title>
+  <link rel="stylesheet" type="text/css" href="/folio.css">
+  <link rel="stylesheet" type="text/css" href="/pygments.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Folio's Folio</h1>
+      <h2>static website generator</h2>
+    </div>
+    <div class="content clearfix">
+      <div class="main">
+        <div class="inner">
+{% block body %}{% endblock %}
+        </div>
+      </div>
+      <div class="sidebar">
+        <h4>Meet Folio</h4>
+        <ul>
+          <li>
+            <a href="/"{% if current == 'about' %} class="active"{% endif %}>About</a>
+          </li>
+          <li>
+            <a href="/download.html"{% if current == 'download' %} class="active"{% endif %}>Download</a>
+          </li>
+          <li>
+            <a href="/community.html"{% if current == 'community' %} class="active"{% endif %}>Community</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

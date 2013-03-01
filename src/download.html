@@ -1,0 +1,21 @@
+{% extends  "_base.html" %}
+{% set current = 'download' %}
+
+{% block title %}Download -- {{ super() }}{% endblock %}
+
+{% set download_version = '0.1' %}
+{% set download = 'https://pypi.python.org/packages/source/F/Folio/Folio-' ~ download_version ~ '.tar.gz' %}
+
+{% block body %}
+<p>Lastest release is <b>{{ download_version }}</b>, download it from
+   <a href="{{ download }}">here</a> or visit the
+   <a href="https://pypi.python.org/pypi/Folio">PyPi page</a> for
+   a list of downloads.</p>
+
+<h2>Installation</h2>
+<p>Using <code>pip</code> is the easiest way to install, it will do the work of
+   getting the dependencies and setting everything up, simply run:</p>
+{% highlight 'bash' %}
+$ pip install Folio
+{% endhighlight %}
+{% endblock %}

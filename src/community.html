@@ -1,0 +1,18 @@
+{% extends  "_base.html" %}
+{% set current = 'community' %}
+
+{% block title %}Comunnity -- {{ super() }}{% endblock %}
+
+{% block body %}
+<h1>Mailing List</h1>
+<p>The mailinglist is hosted on <a href="http://librelist.com/">librelist</a>
+   and is available for technical questions. To subscribe, send a mail to
+   <i>folio@librelist.com</i> and reply to the confirmation mail.</p>
+
+<h2>Development</h2>
+<p>The main repository for folio is hosted at <i>momo.guide42.com</i>. But a
+   mirror hosted on <a href="http://github.com/">github.com</a>.</p>
+{% highlight 'bash' %}
+$ git clone git://github.com/guide42/folio.git
+{% endhighlight %}
+{% endblock %}

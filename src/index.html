@@ -1,0 +1,32 @@
+{% extends  "_base.html" %}
+{% set current = 'about' %}
+
+{% block title %}{{ super() }} -- static website generator{% endblock %}
+
+{% block body %}
+<p>Folio is an static website builder from dynamic templates written in Python
+   and it's Open Source (<a href="/license.html">ISC license</a>).</p>
+<p>It's written with simplicity and freedom in mind. The core tries to solve
+   only one problem, and features are implemented as extensions. This makes a
+   base code very small, simple and easy to read. The large number of
+   extensions gives the possibility to only use the requirements you website
+   needs.</p>
+<p>It's developer-oriented. You will start creating a Python module that will
+   concentrate all your website configuration, the extensions in use, and
+   advanced features you might develop.</p>
+
+{% highlight 'python' %}
+from folio import Folio
+proj = Folio(__name__)
+if __name__ == "__main__":
+    proj.build()
+{% endhighlight %}
+
+<p>The core of Folio is quite small but provides powerful features:</p>
+<ul>
+  <li><b>Modularity and extensibility</b>: Under the hood, Folio is actually a
+      collection of differents extensions.</li>
+  <li><b>Small codebase</b>: You can understand Folio's code entirely in just
+      a few hours.</li>
+</ul>
+{% endblock %}
