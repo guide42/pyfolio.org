@@ -9,8 +9,13 @@ proj = Folio(__name__, extensions=[],
 
 def debug():
     import logging
+
+    # Print DEBUG messages to STDOUT.
     proj.logger.addHandler(logging.StreamHandler())
     proj.logger.setLevel(logging.DEBUG)
+
+    # Change DEBUG config option.
+    proj.config['DEBUG'] = True
 
 if __name__ == '__main__':
     debug()
