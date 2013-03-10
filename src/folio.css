@@ -47,7 +47,7 @@ dl.horizontal dd { margin-left: 180px; }
 .content .sidebar ul li a.active { background-color: #B3B3B3;
                                    border-top: 1px solid #999;
                                    border-bottom: 1px solid #D5D5D5; }
-.content .sidebar ul li a small  { display: block; color: #666;
+.content .sidebar ul li a small  { display: block; float: right; color: #666;
                                    font-size: 14px; }
 .content .sidebar p              { padding: 0 20px; margin: 5px 0; }
 

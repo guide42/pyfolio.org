@@ -3,7 +3,7 @@
 
 {% block title %}Download -- {{ super() }}{% endblock %}
 
-{% set download_version = '0.1' %}
+{% set download_version = version %}
 {% set download = 'https://pypi.python.org/packages/source/F/Folio/Folio-' ~ download_version ~ '.tar.gz' %}
 
 {% block body %}
