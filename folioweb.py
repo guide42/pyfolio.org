@@ -4,8 +4,12 @@
 
 from folio import Folio
 
-proj = Folio(__name__, extensions=[],
+proj = Folio(__name__, extensions=['themes'],
              jinja_extensions=['jinja2_highlight.HighlightExtension'])
+
+proj.config.update({
+    'THEME': 'folio',
+})
 
 @proj.context('*.html')
 def version(env):
