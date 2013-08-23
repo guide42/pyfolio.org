@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 from folioweb import proj, debug
 from folio.ext.server import run
 
