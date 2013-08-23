@@ -4,6 +4,8 @@
 
 from folio import Folio
 
+__version__ = '0.3'
+
 proj = Folio(__name__, extensions=['themes'],
              jinja_extensions=['jinja2_highlight.HighlightExtension'])
 
@@ -13,7 +15,7 @@ proj.config.update({
 
 @proj.context('*.html')
 def version(env):
-    return {'version': '0.2'}
+    return {'version': __version__}
 
 def debug():
     import logging
