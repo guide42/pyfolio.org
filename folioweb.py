@@ -13,9 +13,11 @@ proj.config.update({
     'THEME': 'folio',
 })
 
+
 @proj.context('*.html')
 def version(env):
     return {'version': __version__}
+
 
 def debug():
     import logging
