@@ -4,7 +4,7 @@
 
 from folio import Folio
 
-__version__ = '0.3'
+__version__ = '0.4'
 
 proj = Folio(__name__, extensions=['themes'],
              jinja_extensions=['jinja2_highlight.HighlightExtension'])
